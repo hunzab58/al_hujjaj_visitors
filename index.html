@@ -31,38 +31,51 @@
         }
 
       r; gap: 8px; }
-        .header-logo { height: 40px; width: auto; object-fit: contain; }
-  header {
-            
-            background: rgba(255,255,255,0.1); backdrop-filter: blur(15px);
-            position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--primary-gold);
-        }
-header {
+        header {
             display: flex !important;
             align-items: center !important;
             justify-content: space-between !important;
-            padding: 8px 3% !important;
-            background: rgba(255,255,255,0.95) !important;
+            padding: 5px 10px !important; /* Padding kam ki taake jagah bachay */
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid var(--primary-gold);
-            flex-wrap: nowrap !important; /* Is se nichli line par nahi gire ga */
+            flex-wrap: nowrap !important; /* <--- Ye sab ko ek hi line mein rakhay ga */
+            height: 60px;
         }
 
         .logo-area {
-            display: flex !important;
-            align-items: center !important;
-            flex-shrink: 0 !important;
+            display: flex;
+            align-items: center;
+            flex-shrink: 1; /* Logo ko thora chota honay ki ijazat di */
+            min-width: 100px;
         }
 
         .header-logo { 
-            height: 30px !important; 
+            height: 28px !important; /* Mobile ke liye chota size */
             width: auto; 
-            object-fit: contain;
         }
-    flex-wrap: nowrap !important; /* Ye nichli line par janay se rokta hai */
+
+        .nav-icons {
+            display: flex !important;
+            align-items: center !important;
+            gap: 5px !important; /* Icons ka fasla kam kiya */
+            margin-left: auto !important; /* Logo ko left aur icons ko right rakhta hai */
+            flex-shrink: 0 !important; /* Icons ko pichakne nahi dega */
+        }
+
+        /* Google Translate ko mazeed chota kiya taake fit aaye */
+        #google_translate_element {
+            max-width: 110px !important;
+            overflow: hidden;
+        }
+
+        .goog-te-gadget-simple {
+            padding: 1px 3px !important;
+            font-size: 10px !important;
+        }
     padding: 10px 3%;
     background: rgba(255,255,255,0.1); 
     backdrop-filter: blur(15px);
@@ -258,5 +271,6 @@ header {
 </body>
 
 </html>
+
 
 
