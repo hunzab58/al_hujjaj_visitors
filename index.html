@@ -228,7 +228,27 @@ header {
     display: block;
     text-align: right;
 }
-   
+
+        /* --- FORCE MENU FIX --- */
+#sideMenu {
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important; /* Shuru mein bilkul chupa rahega */
+    width: 60% !important;   /* Half screen cover karega */
+    height: 100% !important;
+    background: white !important;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5) !important;
+    transition: 0.5s ease-in-out !important;
+    z-index: 999999 !important; /* Sab se upar rahega */
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Jab click hoga tab ye class kaam karegi */
+#sideMenu.active {
+    right: 0 !important;
+}
+        
     </style>
 </head>
 <body>
@@ -361,6 +381,7 @@ header {
 </body>
 
 </html>
+
 
 
 
