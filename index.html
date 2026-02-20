@@ -369,6 +369,14 @@ header {
     </script>
 <script>
     function toggleMenu() {
+        var myMenu = document.getElementById("sideMenu");
+        if (myMenu) {
+            myMenu.classList.toggle("active");
+        }
+    }
+</script>
+    <script>
+    function toggleMenu() {
         // Ye line menu ko dhoondti hai
         var menu = document.getElementById("sideMenu");
         
@@ -381,6 +389,7 @@ header {
 </body>
 
 </html>
+
 
 
 
