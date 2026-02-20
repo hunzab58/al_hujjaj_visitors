@@ -31,7 +31,7 @@
         }
 
         header {
-            flex-wrap: nowrap;
+            
             background: rgba(255,255,255,0.1); backdrop-filter: blur(15px);
             position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--primary-gold);
         }
@@ -57,21 +57,8 @@
             color: var(--text-color) !important;
             font-size: 13px !important;
         }
-.nav-icons { 
-    display: flex; 
-    align-items: center; 
-    gap: 8px;           /* Fasla kam kar diya taake ek line mein aayein */
-    font-size: 1rem;    /* Icons ka size thora chota kar diya */
-    color: var(--primary-gold); 
-    margin-left: auto;  /* Ye logo se door rakhay ga lekin line change nahi honay dega */
-}
 
-/* Google Translate ke dropdown ko mazeed chota karne ke liye */
-.goog-te-gadget-simple {
-    padding: 2px 4px !important;
-    font-size: 11px !important;
-}
-       
+        .nav-icons { display: flex;  margin-left: auto; gap: 20px; align-items: center; font-size: 1.2rem; color: var(--primary-gold); }
         .nav-icons i { cursor: pointer; transition: 0.3s; }
 
         .sidebar {
@@ -262,6 +249,4 @@
         }
     </script>
 </body>
-
 </html>
-
