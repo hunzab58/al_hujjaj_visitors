@@ -200,6 +200,35 @@ header {
 }
 
 .side-menu.active { right: 0 !important; }
+   /* Sidebar ko chupanay aur dikhanay ke liye */
+.side-menu {
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important; /* Shuru mein screen se bahar hoga */
+    width: 65% !important;   /* Half screen se thora zyada */
+    height: 100vh !important;
+    background: #ffffff !important;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3) !important;
+    transition: 0.4s ease-in-out !important;
+    z-index: 99999 !important; /* Sab se upar dikhne ke liye */
+    display: block !important;
+}
+
+/* Jab active class aaye to menu andar aa jaye */
+.side-menu.active {
+    right: 0 !important;
+}
+
+/* Close button (X) ki sahi jagah */
+.close-btn {
+    font-size: 35px !important;
+    color: var(--primary-gold);
+    cursor: pointer;
+    padding: 20px;
+    display: block;
+    text-align: right;
+}
+   
     </style>
 </head>
 <body>
@@ -318,9 +347,21 @@ header {
             alert("JazakAllah! Your feedback has been submitted. ✨");
         }
     </script>
+<script>
+    function toggleMenu() {
+        // Ye line menu ko dhoondti hai
+        var menu = document.getElementById("sideMenu");
+        
+        // Ye line 'active' class ko lagati ya hatati hai
+        if (menu) {
+            menu.classList.toggle("active");
+        }
+    }
+</script>
 </body>
 
 </html>
+
 
 
 
