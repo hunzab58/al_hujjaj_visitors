@@ -150,6 +150,56 @@
             width: 55px; height: 55px; border-radius: 50%; display: flex;
             justify-content: center; align-items: center; font-size: 1.8rem; color: white; z-index: 1000;
         }
+   /* --- FIXED HEADER & ICONS --- */
+header {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 5px 10px !important;
+    height: 60px !important;
+    background: white !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+}
+
+/* Logo aur 3 lines (Menu) ko Left side par rakhne ke liye */
+.logo-area {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    order: 1 !important; /* Force to Left */
+}
+
+/* Icons (Moon, Profile, Language) ko Right side par rakhne ke liye */
+.nav-icons {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-left: auto !important; /* Push to Right */
+    order: 2 !important; /* Force to Right */
+}
+
+/* Sab kuch ek line mein fit karne ke liye chota size */
+#google_translate_element { max-width: 100px !important; overflow: hidden !important; }
+.header-logo { height: 25px !important; width: auto !important; }
+
+/* Side Menu Settings (Half screen) */
+.side-menu {
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    width: 60% !important; /* Adhi screen par menu */
+    height: 100% !important;
+    background: white !important;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2) !important;
+    transition: 0.4s ease !important;
+    z-index: 10000 !important;
+}
+
+.side-menu.active { right: 0 !important; }
     </style>
 </head>
 <body>
@@ -271,6 +321,7 @@
 </body>
 
 </html>
+
 
 
 
