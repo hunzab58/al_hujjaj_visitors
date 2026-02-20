@@ -58,7 +58,21 @@
             font-size: 13px !important;
         }
 
-        .nav-icons { display: flex;  margin-left: auto; gap: 20px; align-items: center; font-size: 1.2rem; color: var(--primary-gold); }
+        header {
+    display: flex !important; 
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important; /* Ye nichli line par janay se rokta hai */
+    padding: 10px 3%;
+    background: rgba(255,255,255,0.1); 
+    backdrop-filter: blur(15px);
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    border-bottom: 1px solid var(--primary-gold);
+    overflow: hidden; /* Extra cheez bahar na nikalay */
+}
         .nav-icons i { cursor: pointer; transition: 0.3s; }
 
         .sidebar {
@@ -249,4 +263,5 @@
         }
     </script>
 </body>
+
 </html>
